@@ -41,6 +41,15 @@ class CkeditorJsonDialog extends FormBase {
       '#type' => 'textarea',
       '#title' => $this->t('Body'),
       '#default_value' => isset($input['body']) ? $input['body'] : '',
+
+      '#description' => '
+        <ul id="simpleList" class="list-group">
+          <li class="list-group-item">This is <a href="http://SortableJS.github.io/Sortable/">Sortable</a></li>
+          <li class="list-group-item">It works with Bootstrap...</li>
+          <li class="list-group-item">...out of the box.</li>
+          <li class="list-group-item">It has support for touch devices.</li>
+          <li class="list-group-item">Just drag some elements around.</li>
+        </ul>',
       '#size' => 50,
     );
 

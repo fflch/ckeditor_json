@@ -86,6 +86,8 @@
         }
       }
     });
-  
   })(jQuery, Drupal, drupalSettings, CKEDITOR);
+
+
+
   
