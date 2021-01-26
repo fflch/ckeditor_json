@@ -1,0 +1,12 @@
+.ckeditor-json{
+    background-color: red;
+    color: blue;
+}
+
+p {
+    color: blue;
+}
+
+h1.ckeditor-json-header {
+    color: green;
+}

@@ -1,0 +1,15 @@
+
+#editor-ckeditor-json-dialog-form .form-item-attributes-header {
+    float: left;
+    padding-right: 10px;
+  }
+  
+#editor-ckeditor-json-dialog-form .form-item-attributes-header-element-type {
+  float: left;
+}
+
+#editor-ckeditor-json-dialog-form .form-item-attributes-body {
+  clear: both;
+  background-color: yellow;
+}
+  

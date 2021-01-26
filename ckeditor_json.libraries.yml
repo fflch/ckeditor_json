@@ -1,0 +1,11 @@
+ckeditor_json:
+  version: VERSION
+  css:
+    theme:
+      css/ckeditor_json.css: {}
+
+ckeditor_json.dialog:
+  version: VERSION
+  css:
+    theme:
+      css/dialog.css: {}

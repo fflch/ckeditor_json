@@ -1,0 +1,10 @@
+
+ckeditor_json.dialog:
+  path: '/ckeditor_json/dialog'
+  defaults:
+    _form: '\Drupal\ckeditor_json\Form\CkeditorJsonDialog'
+    _title: 'ckeditor_json'
+  options:
+    _theme: ajax_base_page
+  requirements:
+    _permission: 'access in-place editing'
