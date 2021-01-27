@@ -10,6 +10,8 @@ use Drupal\Core\Ajax\HtmlCommand;
 use Drupal\editor\Ajax\EditorDialogSave;
 use Drupal\Core\Ajax\CloseModalDialogCommand;
 
+use Drupal\ckeditor_json\Utils\JsonContent;
+
 class CkeditorJsonDialog extends FormBase {
 
   /**
@@ -27,6 +29,14 @@ class CkeditorJsonDialog extends FormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state, FilterFormat $filter_format = NULL) {
 
+    $itens = JsonContent::itens();
+    $options = [];
+    foreach($itens as $item){
+      $options[$item->char_id] = $item->name;
+    }
+    #img
+    #nickname
+
     $user_input = $form_state->getUserInput();
     $input = isset($user_input['editor_object']) ? $user_input['editor_object'] : array();
 
@@ -41,15 +51,13 @@ class CkeditorJsonDialog extends FormBase {
       '#type' => 'textarea',
       '#title' => $this->t('Body'),
       '#default_value' => isset($input['body']) ? $input['body'] : '',
+      '#size' => 50,
+    );
 
-      '#description' => '
-        <ul id="simpleList" class="list-group">
-          <li class="list-group-item">This is <a href="http://SortableJS.github.io/Sortable/">Sortable</a></li>
-          <li class="list-group-item">It works with Bootstrap...</li>
-          <li class="list-group-item">...out of the box.</li>
-          <li class="list-group-item">It has support for touch devices.</li>
-          <li class="list-group-item">Just drag some elements around.</li>
-        </ul>',
+    $form['attributes']['itens'] = array(
+      '#type' => 'checkboxes',
+      '#title' => $this->t('Itens'),
+      '#options' => $options,
       '#size' => 50,
     );
 

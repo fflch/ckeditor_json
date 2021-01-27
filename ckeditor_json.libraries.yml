@@ -11,3 +11,4 @@ ckeditor_json.dialog:
       css/dialog.css: {}
   js:
     //cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js: { type: external, minified: true }
+    js/dialog.js: {}

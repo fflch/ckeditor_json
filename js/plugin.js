@@ -36,6 +36,7 @@
                   header.setHtml('parte de cima');
   
                   var body = editor.document.createElement('p');
+                  console.log(values.itens);
                   body.setHtml(values.body);
   
                   container.append(header);
